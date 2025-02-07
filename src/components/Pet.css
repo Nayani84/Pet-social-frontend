@@ -1,0 +1,68 @@
+/* Pet.css */
+/* .Pet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+} */
+
+.Pet:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Pet h3 {
+    font-size: 1.5rem;
+    margin: 8px 0px;
+    color: #0af4f0;
+    text-align: center;
+}
+
+.Pet p {
+    margin: 4px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.Pet img {
+    width: 300px;
+}
+
+.Pet-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.petbtneditDelete {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.petbtnEdit {
+    background-color: #007bff;
+}
+
+.petbtnDelete {
+    background-color: #dc3545;
+}
+
+.petbtneditDelete i {
+    font-size: 20px;
+}
+
+.petbtneditDelete:hover {
+    opacity: 0.9;
+}

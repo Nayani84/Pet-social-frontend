@@ -1,0 +1,42 @@
+/* EventDetail.css */
+.event-details {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.event-details h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+.event-details p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.event-details strong {
+    color: #000;
+}
+
+.btngoogle-calendar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+}

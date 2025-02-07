@@ -1,0 +1,120 @@
+/* PostDetail.css */
+.post-details-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.post-details-container h1 {
+  text-align: center;
+  color: teal;
+}
+
+.post-details-container h3 {
+  color: #e457d6;
+}
+
+.post-details-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 20px;/
+}
+
+.post-details-container p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.post-details-container strong {
+  color: #000;
+}
+
+.Post-comment {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.comment-content-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Post-comment button:first-child {
+  background-color: #FFA500;
+  color: white;
+}
+
+.Post-comment button:last-child {
+  background-color: #FF6347;
+  color: white;
+  margin-left: 10px;
+}
+
+.post-details-container form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.post-details-container input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.post-details-container button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.PostDetail-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.postdetailbtneditDelete {
+  padding: 5px 5px;
+  font-size: 14px;
+  width: 20px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.postdetailbtnEdit {
+  background-color: #007bff;
+}
+
+.postdetailbtnDelete {
+  background-color: #dc3545;
+}
+
+.postdetailbtneditDelete svg {
+  font-size: 14px;
+}
+
+.postdetailbtneditDelete:hover {
+  opacity: 0.9;
+}

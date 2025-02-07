@@ -1,0 +1,53 @@
+/* SearchBar.css */
+.SearchBar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.SearchBar-container form {
+  position: relative;
+  width: 300px;
+}
+
+.SearchBar-container input {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+.SearchBar-container button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+.SearchBar-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  margin-right: 5px;
+  width: 110px;
+}
+
+.SearchBar-container button:hover {
+  color: #000;
+}
+
+.SearchBar-container input:focus {
+  outline: none;
+  border-color: #888;
+}

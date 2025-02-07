@@ -1,0 +1,67 @@
+/* Home.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.home-content-layout {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  width: 100%;
+}
+
+.events-section,
+.posts-section,
+.news-section {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  margin: 0.5rem;
+}
+
+.events-section,
+.news-section {
+  flex: 1;
+  width: 25%;
+}
+
+.posts-section {
+  flex: 2;
+}
+
+.home-container .message-box h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #d015f9;
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2), -2px -2px 6px rgba(135, 206, 250, 0.8);
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+  .home-container,
+  .home-content-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events-section,
+  .posts-section,
+  .news-section {
+    width: 100%;
+  }
+
+}

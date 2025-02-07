@@ -1,0 +1,71 @@
+/* MyPostList.css */
+.MyPostList h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.MyCreatePost-btn {
+    margin-bottom: 20px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.MyCreatePost-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.MyCreatePost-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(72, 180, 97, 0.5);
+}
+
+.MyCreatePost-btn:active {
+    transform: scale(0.98);
+}
+
+.MyCreatePost-btn a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.MyCreatePost-btn a:hover {
+    text-decoration: underline;
+}
+
+.MyPostList-btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.MyPostList-btns button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.MyPostList-btns button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.MyPostList-btns button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

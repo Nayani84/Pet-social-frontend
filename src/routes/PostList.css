@@ -1,0 +1,90 @@
+/* PostList.css */
+.filter-form {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  margin: auto;
+}
+
+.filter-date {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.input-date-number {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.newPost {
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.newPost:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newPost:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(72, 180, 97, 0.5);
+}
+
+.newPost:active {
+  transform: scale(0.98);
+}
+
+.newPost a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.newPost a:hover {
+  text-decoration: underline;
+}
+
+.limit input {
+  width: 40px;
+}
+
+.btnNext {
+  float: right;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+  .filter-date {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+}

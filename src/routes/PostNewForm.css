@@ -1,0 +1,74 @@
+/* PostNewForm.css */
+.PostNewForm-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.PostNewForm-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-new-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.PostNewForm-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.PostNewForm-container input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.PostNewForm-container .submit-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.PostNewForm-container .submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+    .post-new-form {
+        gap: 10px;
+    }
+
+    .PostNewForm-container input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    .PostNewForm-container .submit-button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+}

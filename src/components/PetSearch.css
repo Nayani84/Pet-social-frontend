@@ -1,0 +1,74 @@
+/* PetSearch.css */
+.PetSearch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+.PetSearch-filters {
+    display: flex;
+    align-items: center;
+}
+
+.PetSearch-filters div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.PetSearch-filters label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.PetSearch-filters select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+
+.PetSearch .SearchBar-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    margin: 5px !important;
+    width: 300px;
+}
+
+.PetSearch .filterForm {
+    width: 350px;
+    margin: 5px
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    
+    .PetSearch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+    }
+
+    .PetSearch-filters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}

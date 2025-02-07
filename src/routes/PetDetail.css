@@ -1,0 +1,41 @@
+/* PetDetail.css */
+.PetDetail {
+  width: 60%;
+  max-width: 600px;
+  min-height: 85vh;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-align: left;
+}
+
+.PetDetail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.PetDetail img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.PetDetail h1 {
+  text-align: center;
+  color: teal;
+}
+
+.Petdetail p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.Petdetail strong {
+  color: #000;
+}
