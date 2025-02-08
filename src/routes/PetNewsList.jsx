@@ -29,6 +29,7 @@ function PetNewsList({ numPetNewsToGet = 2 }) {
         /* retrieve pet news from NewsCatcher API */
         async function getPetNews() {
             try {
+               console.log("**********Newscatcher", import.meta.env.VITE_NEWSCATCHER_API_KEY) ;
                 const res = await rateLimitedRequest(
                     `https://api.newscatcherapi.com/v2/search?q=pet&lang=en&page_size=${numPetNewsToGet}&sort_by=relevancy&page=${Math.floor(Math.random() * 10) + 1}`,
                     {
