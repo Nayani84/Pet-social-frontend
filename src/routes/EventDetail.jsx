@@ -23,12 +23,17 @@ const EventDetail = () => {
     fetchEvent();
   }, [id]);
 
+  // const handleGoogleCalendar = () => {
+  //   // Redirect to the backend route which handles Google OAuth
+  //   // window.location.href = `http://localhost:3001/auth/login?eveid=${id}`;
+  //   window.location.href = `https://pet-social-backend.onrender.com/auth/login?eveid=${id}`;
+  //   // window.location.href = `${import.meta.env.VITE_API_BASE_URL || 'https://pet-social-backend.onrender.com'}/auth/login?eveid=${id}`;
+  // };
   const handleGoogleCalendar = () => {
-    // Redirect to the backend route which handles Google OAuth
-    // window.location.href = `http://localhost:3001/auth/login?eveid=${id}`;
-    window.location.href = `https://pet-social-backend.onrender.com/auth/login?eveid=${id}`;
-    // window.location.href = `${import.meta.env.VITE_API_BASE_URL || 'https://pet-social-backend.onrender.com'}/auth/login?eveid=${id}`;
+    const backendUrl = import.meta.env.VITE_API_BASE_URL || 'https://pet-social-backend.onrender.com';
+    window.location.href = `${backendUrl}/auth/login?eveid=${id}`;
   };
+  
 
   if (!event) return <p>Loading event details...</p>;
 
