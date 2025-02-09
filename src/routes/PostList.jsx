@@ -126,7 +126,6 @@ function PostList() {
               key={post.id}
               post={post}
               currentUser={currentUser}
-              // onLike={handleLike}
               onDelete={handleDelete}
             />
           ))

@@ -66,7 +66,7 @@ function ProfileEditForm() {
     return (
         <div className="Profile-update-container">
             <h1>Edit Profile</h1>
-           
+
             <form className="profile-update-form" onSubmit={handleSubmit}>
                 <div className="profile-update-form-group">
                     <label htmlFor="username">Username</label>
@@ -133,12 +133,6 @@ function ProfileEditForm() {
 
                 <button type="submit" className="save-button">Save Changes</button>
             </form>
-
-
-
-
-
-
 
         </div>
     )

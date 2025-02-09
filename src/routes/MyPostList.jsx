@@ -43,11 +43,7 @@ function MyPostList() {
     setFilters((f) => ({ ...f, offset: Math.max(0, f.offset - (f.limit || 10)) }));
   };
 
-  // const handleLike = async (postId) => {
-  //   // console.log(`Liked post with ID: ${postId}`);
-  //   // Optionally send a like request to the server
-  // };
-
+ 
   const handleDelete = async (postId) => {
     try {
       await PetApi.deletePost(postId);
@@ -63,9 +59,7 @@ function MyPostList() {
 
       {currentUser && (
         <div className="MyCreatePost-btn">
-          {/* <button> */}
             <Link to="/posts/new">Share Something <FontAwesomeIcon icon={faPaw} /></Link>
-          {/* </button> */}
         </div>
       )}
 

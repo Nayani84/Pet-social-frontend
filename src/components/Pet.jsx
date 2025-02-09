@@ -30,11 +30,6 @@ function Pet({ pet, isMyPet = false, onDelete }) {
             <h3><Link to={`/pets/${pet.id}`}>{pet.name}</Link></h3>
             <img src={pet.photoUrl} alt={pet.name} />
 
-            {/* <p>{pet.type}</p>
-            <p>Breed: {pet.breed}</p>
-            <p>{pet.age} years old</p>
-            <p>{pet.bio}</p> */}
-
             {isMyPet && (
                 <div className="Pet-actions">
 
