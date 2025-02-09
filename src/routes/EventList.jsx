@@ -6,7 +6,6 @@ import Event from "../components/Event";
 import SearchBar from "../components/SearchBar";
 import "./EventList.css";
 
-const GOOGLE_AUTH_URL = "http://localhost:3001/auth/google";
 
 const EventList = () => {
   const [events, setEvents] = useState([]);

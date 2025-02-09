@@ -16,7 +16,8 @@ function NavBar({ onLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const socket = io("http://localhost:3001"); // Update with your backend URL
+  const socketUrl = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3001';
+  const socket = io(socketUrl);
 
   useEffect(() => {
     if (currentUser) {

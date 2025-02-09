@@ -28,7 +28,7 @@ function SignupForm({ signup }) {
     try {
       const data = {
         ...formData,
-        profilePic: formData.profilePic.trim() ? formData.profilePic : 'http://localhost:3001/images/user.png',
+        profilePic: formData.profilePic.trim() ? formData.profilePic : '/images/user.png',
       };
       await signup(data);
       navigate("/");

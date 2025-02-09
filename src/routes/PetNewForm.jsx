@@ -32,7 +32,7 @@ function PetNewForm({ createPet, currentUser }) {
       const petData = { ...formData, 
         ownerId: currentUser.id, 
         age: parseInt(formData.age, 10) || 0,
-        photoUrl: formData.photoUrl.trim() ? formData.photoUrl : 'http://localhost:3001/images/pets.jpg',
+        photoUrl: formData.photoUrl.trim() ? formData.photoUrl : '/images/pets.jpg',
        };
       
       await createPet(petData); // `createPet` makes the API call
