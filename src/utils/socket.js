@@ -1,19 +1,29 @@
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:3001");
+// Use environment variable or fallback to localhost for development
+const socket = io(process.env.VITE_SOCKET_URL || "http://localhost:3001");
 
+// Join notifications room
 export const joinNotifications = (userId) => {
-  socket.emit("join", userId);
+  if (socket && userId) {
+    socket.emit("join", userId);
+  }
 };
 
+// Listen for new notifications
 export const listenForNotifications = (callback) => {
-  socket.on("new_notification", (notification) => {
-    callback(notification);
-  });
+  if (socket) {
+    socket.on("new_notification", (notification) => {
+      callback(notification);
+    });
+  }
 };
 
+// Disconnect the socket connection
 export const disconnectSocket = () => {
-  socket.disconnect();
+  if (socket) {
+    socket.disconnect();
+  }
 };
 
 export default socket;
