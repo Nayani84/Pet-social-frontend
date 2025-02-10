@@ -7,6 +7,7 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 import "./NavBar.css";
 import PetApi from "../PetApi";
 import { io } from "socket.io-client";
+import { getSocketUrl } from "../utils/config";
 
 function NavBar({ onLogout }) {
   const { currentUser } = useContext(CurrentUserContext);
@@ -16,7 +17,9 @@ function NavBar({ onLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const socketUrl = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3001';
+  // const socketUrl = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3001';
+  // const socket = io(socketUrl);
+  const socketUrl = getSocketUrl();
   const socket = io(socketUrl);
 
   useEffect(() => {

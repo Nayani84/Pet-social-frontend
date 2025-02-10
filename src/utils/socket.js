@@ -1,7 +1,8 @@
 import { io } from "socket.io-client";
+import { getSocketUrl } from "../utils/config";
 
-// Use environment variable or fallback to localhost for development
-const socket = io(process.env.VITE_SOCKET_URL || "http://localhost:3001");
+const socket = io(getSocketUrl());
+// const socket = io(process.env.VITE_SOCKET_URL || "http://localhost:3001");
 
 // Join notifications room
 export const joinNotifications = (userId) => {
