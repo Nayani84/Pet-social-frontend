@@ -26,7 +26,7 @@ function LoginForm({ login }) {
     const success = await login(formData);
     setIsLoading(false);
     if (success) {
-      navigate("/");
+      window.location.href = '/';
     } else {
       alert("Login failed. Please check your credentials.");
     }

@@ -73,7 +73,6 @@ function App() {
   const login = async (loginData) => {
     try {
       const newToken = await PetApi.login(loginData);
-      console.log(loginData);
       setToken(newToken);
       PetApi.token = newToken;
 
@@ -83,7 +82,6 @@ function App() {
       setCurrentUser(user);
       return true;
     } catch (err) {
-      console.log(err.response);
       console.error("Login failed:", err);
       return false;
     }
@@ -108,7 +106,6 @@ function App() {
   async function createPet(petData) {
     try {
       const newPet = await PetApi.createPet(petData); // Calls your API
-      console.log("Pet created successfully:", newPet);
       return newPet;
     } catch (err) {
       console.error("Error creating pet:", err);

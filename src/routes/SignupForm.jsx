@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignupForm.css";
+import PetApi from "../PetApi";
 
 function SignupForm({ signup }) {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ function SignupForm({ signup }) {
   }
 
   const [formData, setFormData] = useState(INITIAL_STATE);
+  const [errors, setErrors] = useState([]);  // State to track errors
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,11 +32,14 @@ function SignupForm({ signup }) {
         ...formData,
         profilePic: formData.profilePic.trim() ? formData.profilePic : '/images/user.png',
       };
-      await signup(data);
-      navigate("/");
+      await PetApi.signup(data);
+      // navigate("/");
+      alert("Welcome aboard! Your account has been created successfully. Redirecting you to the login page...");
+      window.location.href = "/login";
     } catch (err) {
       console.error("Error creating profile:", err);
-      alert("Failed to signup. Please try again.");
+      // alert("Failed to signup. Please try again.");
+      setErrors(err);
     }
   };
 
@@ -42,6 +47,14 @@ function SignupForm({ signup }) {
   return (
     <div className="Signup-container">
       <h1>Sign Up</h1>
+      {errors.length > 0 && (
+        <div className="error-messages">
+          {errors.map((error, idx) => (
+            <p key={idx} className="error-text">{error}</p>
+          ))}
+        </div>
+      )}
+      
       <form className="signup-form" onSubmit={handleSubmit}>
 
         <div className="form-group">
