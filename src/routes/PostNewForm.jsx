@@ -23,7 +23,6 @@ function PostNewForm({ currentUser }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted");
         try {
             const postData = { ...formData, ownerId: currentUser.id };
             const createdPost = await PetApi.createPost(postData);

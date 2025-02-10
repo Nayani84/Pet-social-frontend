@@ -31,8 +31,6 @@ function PostList() {
           })
         );
         // Include the search term in the filters
-        console.log("search", searchTerms);
-
         const finalFilters = {
           ...cleanedFilters,
           content: searchTerms.title?.trim() || "",

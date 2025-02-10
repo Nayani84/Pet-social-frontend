@@ -12,7 +12,6 @@ function useLocalStorage(key, initialValue = null) {
     });
 
     useEffect(() => {
-        console.log("Stored value in localStorage:", storedvalue);
         try {
             if (storedvalue === null) {
                 window.localStorage.removeItem(key);

@@ -16,6 +16,7 @@ function PetNewForm({ createPet, currentUser }) {
   };
 
   const [formData, setFormData] = useState(INITIAL_STATE);
+    const [errors, setErrors] = useState([]);  // State to track errors
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +29,6 @@ function PetNewForm({ createPet, currentUser }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // console.log("Submitting pet data:", formData);  
       const petData = { ...formData, 
         ownerId: currentUser.id, 
         age: parseInt(formData.age, 10) || 0,
@@ -39,13 +39,22 @@ function PetNewForm({ createPet, currentUser }) {
       navigate("/pets"); // Navigate to the pet listing or relevant page
     } catch (err) {
       console.error("Error creating pet:", err);
-      alert("Failed to create pet. Please try again.");
+      // alert("Failed to create pet. Please try again.");
+      setErrors(err);
     }
   };
 
   return (
     <div className="PetNewForm-container">
       <h1>Add a New Pet</h1>
+      {errors.length > 0 && (
+        <div className="error-messages">
+          {errors.map((error, idx) => (
+            <p key={idx} className="error-text">{error}</p>
+          ))}
+        </div>
+      )}
+      
       <form className="pet-new-form" onSubmit={handleSubmit} role="form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>

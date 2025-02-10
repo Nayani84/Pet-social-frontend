@@ -25,10 +25,7 @@ class PetApi {
     }
 
     static removeToken() {
-        console.log("before remove", this.getToken());
         localStorage.clear();
-
-        console.log("after remove", this.getToken());
     }
 
     static getToken() {
@@ -42,7 +39,6 @@ class PetApi {
         //there are multiple ways to pass an authorization token, this is how you pass it in the header.
         //this has been provided to show you another way to pass the token. you are only expected to read this code for this project.
         // Log the token to ensure it is being set
-        // console.log("Token being sent:", this.token);
 
         const url = `${BASE_URL}/${endpoint}`;
 
@@ -153,7 +149,6 @@ class PetApi {
 
     /** Get a list of pets (with optional filters). */
     static async getPets(searchTerms = {}) {
-        console.log("serachTarms before :", searchTerms);
         let res = await this.request("pets", searchTerms);
         return res.pets;
     }
@@ -179,7 +174,6 @@ class PetApi {
     /** Update an existing pet. */
     static async updatePet(id, petData) {
         const res = await this.request(`pets/${id}`, petData, "patch");
-        // console.log(res.pet);
         return res.pet;
     }
 
@@ -226,7 +220,6 @@ class PetApi {
     /** Update an existing post. */
     static async updatePost(id, postData) {
         const res = await this.request(`posts/${id}`, postData, "patch");
-        // console.log(res.post);
         return res.post;
     }
 
@@ -260,10 +253,8 @@ class PetApi {
 
     /** Add like to post. */
     static async addLike(postId, data) {
-        console.log("Adding like for post ID:", postId); // Debug log
         try {
             const res = await this.request("likes", { postId, ...data }, "post");
-            console.log("Add Like Response:", res);
             return res;
         } catch (err) {
             console.error("Error adding like:", err.response || err);
@@ -297,13 +288,11 @@ class PetApi {
     /** Update an existing comment. */
     static async updateComment(postId, commentData) {
         const res = await this.request(`comments/${postId}`, commentData, "patch");
-        console.log(res.comment);
         return res.comment;
     }
 
     /** Remove comment from post. */
     static async removeComment(postId) {
-        console.log("Removing comment for post ID:", postId); // Debug log
         try {
             return await this.request(`comments/${postId}`, {}, "delete");
         } catch (err) {
@@ -328,7 +317,6 @@ class PetApi {
                 return typeof value === 'string' ? value.trim() !== "" : value != null;
             })
         );
-        console.log("Clened Filters:", cleanedFilters);
         try {
             const res = await this.request("events", cleanedFilters);
             return res.events;

@@ -8,7 +8,6 @@ function PostEditForm() {
     const { id } = useParams();
     const navigate = useNavigate();
     const { currentUser } = useContext(CurrentUserContext);
-    console.log("Profile: currentUser from context =", currentUser);
 
     const [formData, setFormData] = useState({
         content: '',

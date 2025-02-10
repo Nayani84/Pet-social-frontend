@@ -27,7 +27,6 @@ function PetEditForm() {
         async function fetchPet() {
             try {
                 const pet = await PetApi.getPet(id); // Fetch pet by ID
-                console.log("Fetched Pet Data:", pet);
                 setFormData({
                     name: pet.name || '',
                     type: pet.type || '',
