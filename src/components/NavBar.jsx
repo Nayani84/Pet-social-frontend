@@ -67,7 +67,7 @@ function NavBar({ onLogout }) {
 
   const logout = () => {
     onLogout();
-    window.location.href = "/login";
+    window.location.href = "/";
   };
 
   return (

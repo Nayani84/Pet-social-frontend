@@ -35,7 +35,8 @@ function SignupForm({ signup }) {
       await PetApi.signup(data);
       // navigate("/");
       alert("Welcome aboard! Your account has been created successfully. Redirecting you to the login page...");
-      window.location.href = "/login";
+      navigate("/login");
+      // window.location.href = "/login";
     } catch (err) {
       console.error("Error creating profile:", err);
       // alert("Failed to signup. Please try again.");
