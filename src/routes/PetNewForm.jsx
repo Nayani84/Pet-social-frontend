@@ -54,7 +54,7 @@ function PetNewForm({ createPet, currentUser }) {
           ))}
         </div>
       )}
-      
+
       <form className="pet-new-form" onSubmit={handleSubmit} role="form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -89,6 +89,7 @@ function PetNewForm({ createPet, currentUser }) {
             placeholder="Pet's Breed"
             value={formData.breed}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="form-group">
